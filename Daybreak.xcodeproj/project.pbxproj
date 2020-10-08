@@ -15,8 +15,6 @@
 		F5F7F0B9252D0E5D0022AE4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F7F0B7252D0E5D0022AE4D /* Main.storyboard */; };
 		F5F7F0BB252D0E5E0022AE4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F7F0BA252D0E5E0022AE4D /* Assets.xcassets */; };
 		F5F7F0BE252D0E5E0022AE4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F7F0BC252D0E5E0022AE4D /* LaunchScreen.storyboard */; };
-		F5F7F0C9252D0E5E0022AE4D /* DaybreakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F0C8252D0E5E0022AE4D /* DaybreakTests.swift */; };
-		F5F7F0D4252D0E5E0022AE4D /* DaybreakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F0D3252D0E5E0022AE4D /* DaybreakUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,11 +46,7 @@
 		F5F7F0BD252D0E5E0022AE4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5F7F0BF252D0E5E0022AE4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5F7F0C4252D0E5E0022AE4D /* DaybreakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaybreakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5F7F0C8252D0E5E0022AE4D /* DaybreakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaybreakTests.swift; sourceTree = "<group>"; };
-		F5F7F0CA252D0E5E0022AE4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5F7F0CF252D0E5E0022AE4D /* DaybreakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaybreakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5F7F0D3252D0E5E0022AE4D /* DaybreakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaybreakUITests.swift; sourceTree = "<group>"; };
-		F5F7F0D5252D0E5E0022AE4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				F5F7F0B0252D0E5D0022AE4D /* Daybreak */,
-				F5F7F0C7252D0E5E0022AE4D /* DaybreakTests */,
-				F5F7F0D2252D0E5E0022AE4D /* DaybreakUITests */,
 				F5F7F0AF252D0E5D0022AE4D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,24 +106,6 @@
 				F58CD951252ED58A0067AB8D /* Comfortaa.ttf */,
 			);
 			path = Daybreak;
-			sourceTree = "<group>";
-		};
-		F5F7F0C7252D0E5E0022AE4D /* DaybreakTests */ = {
-			isa = PBXGroup;
-			children = (
-				F5F7F0C8252D0E5E0022AE4D /* DaybreakTests.swift */,
-				F5F7F0CA252D0E5E0022AE4D /* Info.plist */,
-			);
-			path = DaybreakTests;
-			sourceTree = "<group>";
-		};
-		F5F7F0D2252D0E5E0022AE4D /* DaybreakUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F5F7F0D3252D0E5E0022AE4D /* DaybreakUITests.swift */,
-				F5F7F0D5252D0E5E0022AE4D /* Info.plist */,
-			);
-			path = DaybreakUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5F7F0C9252D0E5E0022AE4D /* DaybreakTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +257,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5F7F0D4252D0E5E0022AE4D /* DaybreakUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
