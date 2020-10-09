@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>119423832347-gqfkdfi4mdo22ogorqq7197d92ha0lq3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.119423832347-gqfkdfi4mdo22ogorqq7197d92ha0lq3</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDzoJya_dXQhWHxO8-uUqR-n9EJfbKd_VE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>119423832347</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.cubstart.Daybreak</string>
+	<key>PROJECT_ID</key>
+	<string>daybreak-d5f1e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>daybreak-d5f1e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:119423832347:ios:08c1c9e3d5b0be314ec3be</string>
+	<key>DATABASE_URL</key>
+	<string>https://daybreak-d5f1e.firebaseio.com</string>
+</dict>
+</plist>

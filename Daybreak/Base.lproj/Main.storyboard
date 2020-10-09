@@ -2,9 +2,11 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -13,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Landing Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Daybreak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LandingScreenViewController" customModule="Daybreak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,27 +60,89 @@
                                 <state key="normal" title="Get Started" backgroundImage="Rectangle 1">
                                     <color key="titleColor" name="Text"/>
                                 </state>
+                                <connections>
+                                    <action selector="getStarted:" destination="BYZ-38-t0r" eventType="touchDown" id="WiP-UA-Fac"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Background 1"/>
                     </view>
+                    <connections>
+                        <segue destination="u9I-ek-z0i" kind="show" identifier="getStartedSegue" id="BPo-J4-aV6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="75.669642857142847"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="3Ks-iF-y6i">
+            <objects>
+                <viewController id="u9I-ek-z0i" customClass="LoginViewController" customModule="Daybreak" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6OT-A1-GZT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Daybreak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KD-dZ-OHY">
+                                <rect key="frame" x="29" y="59" width="357" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Comfortaa-Regular_Bold" family="Comfortaa" pointSize="64"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jie-G5-7wT" customClass="GIDSignInButton">
+                                <rect key="frame" x="87" y="380" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="miv-1B-rOJ"/>
+                        <color key="backgroundColor" name="Blue"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XFu-9Y-khW"/>
+                    <connections>
+                        <outlet property="googleSignIn" destination="jie-G5-7wT" id="cDY-7m-RnJ"/>
+                        <segue destination="A6g-rm-m8q" kind="show" identifier="signInSegue" id="eHN-kb-KaB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oTe-co-VsS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1158" y="76"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="I3d-F5-Vlu">
+            <objects>
+                <viewController id="A6g-rm-m8q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7mu-NZ-QJS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="AKY-QJ-qGA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KVR-gh-hXo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JWS-gX-wT4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2054" y="94"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Blue Hill" width="375" height="442"/>
-        <image name="Cloud 1" width="218" height="162"/>
+        <image name="Cloud 1" width="436" height="324"/>
         <image name="Rectangle 1" width="188" height="48"/>
         <image name="alarm-clock 1" width="173" height="173"/>
         <namedColor name="Background 1">
-            <color red="0.98039215686274506" green="0.95294117647058818" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98000001907348633" green="0.95300000905990601" blue="0.86699998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Blue">
+            <color red="0.68199998140335083" green="0.85100001096725464" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Text">
-            <color red="0.36862745098039218" green="0.39215686274509803" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.36899998784065247" green="0.3919999897480011" blue="0.44699999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

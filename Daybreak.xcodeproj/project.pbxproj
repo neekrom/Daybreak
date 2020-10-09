@@ -3,50 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10605A1B04AB15514E4F647B /* Pods_Daybreak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2537C551C75C021738303803 /* Pods_Daybreak.framework */; };
+		F55114BE2530119F008BB2F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F55114BD2530119F008BB2F2 /* GoogleService-Info.plist */; };
+		F56E18B225300D28003A1905 /* LandingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E18B125300D28003A1905 /* LandingScreenViewController.swift */; };
+		F56E18B725300E93003A1905 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E18B625300E93003A1905 /* LoginViewController.swift */; };
 		F58CD952252ED58A0067AB8D /* Comfortaa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F58CD951252ED58A0067AB8D /* Comfortaa.ttf */; };
 		F58CD95A252ED9770067AB8D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58CD959252ED9770067AB8D /* Colors.xcassets */; };
 		F5F7F0B2252D0E5D0022AE4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F0B1252D0E5D0022AE4D /* AppDelegate.swift */; };
 		F5F7F0B4252D0E5D0022AE4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F0B3252D0E5D0022AE4D /* SceneDelegate.swift */; };
-		F5F7F0B6252D0E5D0022AE4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F0B5252D0E5D0022AE4D /* ViewController.swift */; };
 		F5F7F0B9252D0E5D0022AE4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F7F0B7252D0E5D0022AE4D /* Main.storyboard */; };
 		F5F7F0BB252D0E5E0022AE4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F7F0BA252D0E5E0022AE4D /* Assets.xcassets */; };
-		F5F7F0BE252D0E5E0022AE4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F7F0BC252D0E5E0022AE4D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F5F7F0C5252D0E5E0022AE4D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F5F7F0A6252D0E5D0022AE4D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F5F7F0AD252D0E5D0022AE4D;
-			remoteInfo = Daybreak;
-		};
-		F5F7F0D0252D0E5E0022AE4D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F5F7F0A6252D0E5D0022AE4D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F5F7F0AD252D0E5D0022AE4D;
-			remoteInfo = Daybreak;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		2537C551C75C021738303803 /* Pods_Daybreak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daybreak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62AAE8757DE33593CC66C08C /* Pods-Daybreak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daybreak.release.xcconfig"; path = "Target Support Files/Pods-Daybreak/Pods-Daybreak.release.xcconfig"; sourceTree = "<group>"; };
+		6CDFB1F60BB5D8C07F3ED3C3 /* Pods-Daybreak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daybreak.debug.xcconfig"; path = "Target Support Files/Pods-Daybreak/Pods-Daybreak.debug.xcconfig"; sourceTree = "<group>"; };
+		F55114BD2530119F008BB2F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F56E18B125300D28003A1905 /* LandingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenViewController.swift; sourceTree = "<group>"; };
+		F56E18B625300E93003A1905 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F58CD951252ED58A0067AB8D /* Comfortaa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa.ttf; sourceTree = "<group>"; };
 		F58CD959252ED9770067AB8D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		F5F7F0AE252D0E5D0022AE4D /* Daybreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daybreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F7F0B1252D0E5D0022AE4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5F7F0B3252D0E5D0022AE4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F5F7F0B5252D0E5D0022AE4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F5F7F0B8252D0E5D0022AE4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5F7F0BA252D0E5E0022AE4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F5F7F0BD252D0E5E0022AE4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5F7F0BF252D0E5E0022AE4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F5F7F0C4252D0E5E0022AE4D /* DaybreakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaybreakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5F7F0CF252D0E5E0022AE4D /* DaybreakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaybreakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,31 +41,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F5F7F0C1252D0E5E0022AE4D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F5F7F0CC252D0E5E0022AE4D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				10605A1B04AB15514E4F647B /* Pods_Daybreak.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13EF37521743F9A25EF490EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2537C551C75C021738303803 /* Pods_Daybreak.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2E318A8053C8BD29D528FFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6CDFB1F60BB5D8C07F3ED3C3 /* Pods-Daybreak.debug.xcconfig */,
+				62AAE8757DE33593CC66C08C /* Pods-Daybreak.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F56E18AA25300C55003A1905 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F56E18B125300D28003A1905 /* LandingScreenViewController.swift */,
+				F56E18B625300E93003A1905 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		F5F7F0A5252D0E5D0022AE4D = {
 			isa = PBXGroup;
 			children = (
 				F5F7F0B0252D0E5D0022AE4D /* Daybreak */,
 				F5F7F0AF252D0E5D0022AE4D /* Products */,
+				E2E318A8053C8BD29D528FFC /* Pods */,
+				13EF37521743F9A25EF490EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,8 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				F5F7F0AE252D0E5D0022AE4D /* Daybreak.app */,
-				F5F7F0C4252D0E5E0022AE4D /* DaybreakTests.xctest */,
-				F5F7F0CF252D0E5E0022AE4D /* DaybreakUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,15 +95,15 @@
 		F5F7F0B0252D0E5D0022AE4D /* Daybreak */ = {
 			isa = PBXGroup;
 			children = (
+				F56E18AA25300C55003A1905 /* Controllers */,
 				F5F7F0B1252D0E5D0022AE4D /* AppDelegate.swift */,
 				F5F7F0B3252D0E5D0022AE4D /* SceneDelegate.swift */,
-				F5F7F0B5252D0E5D0022AE4D /* ViewController.swift */,
 				F5F7F0B7252D0E5D0022AE4D /* Main.storyboard */,
 				F5F7F0BA252D0E5E0022AE4D /* Assets.xcassets */,
 				F58CD959252ED9770067AB8D /* Colors.xcassets */,
-				F5F7F0BC252D0E5E0022AE4D /* LaunchScreen.storyboard */,
 				F5F7F0BF252D0E5E0022AE4D /* Info.plist */,
 				F58CD951252ED58A0067AB8D /* Comfortaa.ttf */,
+				F55114BD2530119F008BB2F2 /* GoogleService-Info.plist */,
 			);
 			path = Daybreak;
 			sourceTree = "<group>";
@@ -115,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5F7F0D8252D0E5E0022AE4D /* Build configuration list for PBXNativeTarget "Daybreak" */;
 			buildPhases = (
+				77E7971A7E514F8F31045500 /* [CP] Check Pods Manifest.lock */,
 				F5F7F0AA252D0E5D0022AE4D /* Sources */,
 				F5F7F0AB252D0E5D0022AE4D /* Frameworks */,
 				F5F7F0AC252D0E5D0022AE4D /* Resources */,
+				B4E2C1ECC1F8D504D402BF5D /* [CP] Embed Pods Frameworks */,
+				6DB837AC76DA47DB70C52459 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,42 +130,6 @@
 			productName = Daybreak;
 			productReference = F5F7F0AE252D0E5D0022AE4D /* Daybreak.app */;
 			productType = "com.apple.product-type.application";
-		};
-		F5F7F0C3252D0E5E0022AE4D /* DaybreakTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F5F7F0DB252D0E5E0022AE4D /* Build configuration list for PBXNativeTarget "DaybreakTests" */;
-			buildPhases = (
-				F5F7F0C0252D0E5E0022AE4D /* Sources */,
-				F5F7F0C1252D0E5E0022AE4D /* Frameworks */,
-				F5F7F0C2252D0E5E0022AE4D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F5F7F0C6252D0E5E0022AE4D /* PBXTargetDependency */,
-			);
-			name = DaybreakTests;
-			productName = DaybreakTests;
-			productReference = F5F7F0C4252D0E5E0022AE4D /* DaybreakTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F5F7F0CE252D0E5E0022AE4D /* DaybreakUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F5F7F0DE252D0E5E0022AE4D /* Build configuration list for PBXNativeTarget "DaybreakUITests" */;
-			buildPhases = (
-				F5F7F0CB252D0E5E0022AE4D /* Sources */,
-				F5F7F0CC252D0E5E0022AE4D /* Frameworks */,
-				F5F7F0CD252D0E5E0022AE4D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F5F7F0D1252D0E5E0022AE4D /* PBXTargetDependency */,
-			);
-			name = DaybreakUITests;
-			productName = DaybreakUITests;
-			productReference = F5F7F0CF252D0E5E0022AE4D /* DaybreakUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -175,14 +142,6 @@
 				TargetAttributes = {
 					F5F7F0AD252D0E5D0022AE4D = {
 						CreatedOnToolsVersion = 12.0;
-					};
-					F5F7F0C3252D0E5E0022AE4D = {
-						CreatedOnToolsVersion = 12.0;
-						TestTargetID = F5F7F0AD252D0E5D0022AE4D;
-					};
-					F5F7F0CE252D0E5E0022AE4D = {
-						CreatedOnToolsVersion = 12.0;
-						TestTargetID = F5F7F0AD252D0E5D0022AE4D;
 					};
 				};
 			};
@@ -200,8 +159,6 @@
 			projectRoot = "";
 			targets = (
 				F5F7F0AD252D0E5D0022AE4D /* Daybreak */,
-				F5F7F0C3252D0E5E0022AE4D /* DaybreakTests */,
-				F5F7F0CE252D0E5E0022AE4D /* DaybreakUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -212,68 +169,87 @@
 			buildActionMask = 2147483647;
 			files = (
 				F58CD95A252ED9770067AB8D /* Colors.xcassets in Resources */,
-				F5F7F0BE252D0E5E0022AE4D /* LaunchScreen.storyboard in Resources */,
 				F5F7F0BB252D0E5E0022AE4D /* Assets.xcassets in Resources */,
+				F55114BE2530119F008BB2F2 /* GoogleService-Info.plist in Resources */,
 				F58CD952252ED58A0067AB8D /* Comfortaa.ttf in Resources */,
 				F5F7F0B9252D0E5D0022AE4D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5F7F0C2252D0E5E0022AE4D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F5F7F0CD252D0E5E0022AE4D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DB837AC76DA47DB70C52459 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Daybreak/Pods-Daybreak-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Daybreak/Pods-Daybreak-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Daybreak/Pods-Daybreak-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77E7971A7E514F8F31045500 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Daybreak-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4E2C1ECC1F8D504D402BF5D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Daybreak/Pods-Daybreak-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Daybreak/Pods-Daybreak-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Daybreak/Pods-Daybreak-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F5F7F0AA252D0E5D0022AE4D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5F7F0B6252D0E5D0022AE4D /* ViewController.swift in Sources */,
+				F56E18B725300E93003A1905 /* LoginViewController.swift in Sources */,
+				F56E18B225300D28003A1905 /* LandingScreenViewController.swift in Sources */,
 				F5F7F0B2252D0E5D0022AE4D /* AppDelegate.swift in Sources */,
 				F5F7F0B4252D0E5D0022AE4D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5F7F0C0252D0E5E0022AE4D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F5F7F0CB252D0E5E0022AE4D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F5F7F0C6252D0E5E0022AE4D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F5F7F0AD252D0E5D0022AE4D /* Daybreak */;
-			targetProxy = F5F7F0C5252D0E5E0022AE4D /* PBXContainerItemProxy */;
-		};
-		F5F7F0D1252D0E5E0022AE4D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F5F7F0AD252D0E5D0022AE4D /* Daybreak */;
-			targetProxy = F5F7F0D0252D0E5E0022AE4D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F5F7F0B7252D0E5D0022AE4D /* Main.storyboard */ = {
@@ -282,14 +258,6 @@
 				F5F7F0B8252D0E5D0022AE4D /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F5F7F0BC252D0E5E0022AE4D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F5F7F0BD252D0E5E0022AE4D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -413,11 +381,13 @@
 		};
 		F5F7F0D9252D0E5E0022AE4D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CDFB1F60BB5D8C07F3ED3C3 /* Pods-Daybreak.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Daybreak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,11 +401,13 @@
 		};
 		F5F7F0DA252D0E5E0022AE4D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62AAE8757DE33593CC66C08C /* Pods-Daybreak.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Daybreak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,86 +416,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		F5F7F0DC252D0E5E0022AE4D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DaybreakTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cubstart.DaybreakTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Daybreak.app/Daybreak";
-			};
-			name = Debug;
-		};
-		F5F7F0DD252D0E5E0022AE4D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DaybreakTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cubstart.DaybreakTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Daybreak.app/Daybreak";
-			};
-			name = Release;
-		};
-		F5F7F0DF252D0E5E0022AE4D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DaybreakUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cubstart.DaybreakUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Daybreak;
-			};
-			name = Debug;
-		};
-		F5F7F0E0252D0E5E0022AE4D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DaybreakUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cubstart.DaybreakUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Daybreak;
 			};
 			name = Release;
 		};
@@ -544,24 +436,6 @@
 			buildConfigurations = (
 				F5F7F0D9252D0E5E0022AE4D /* Debug */,
 				F5F7F0DA252D0E5E0022AE4D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F5F7F0DB252D0E5E0022AE4D /* Build configuration list for PBXNativeTarget "DaybreakTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F5F7F0DC252D0E5E0022AE4D /* Debug */,
-				F5F7F0DD252D0E5E0022AE4D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F5F7F0DE252D0E5E0022AE4D /* Build configuration list for PBXNativeTarget "DaybreakUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F5F7F0DF252D0E5E0022AE4D /* Debug */,
-				F5F7F0E0252D0E5E0022AE4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
