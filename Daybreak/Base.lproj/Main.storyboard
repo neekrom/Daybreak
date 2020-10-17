@@ -698,6 +698,7 @@
                     <view key="view" contentMode="scaleToFill" id="TW3-7o-bru">
                         <rect key="frame" x="0.0" y="0.0" width="106" height="99"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vTu-1i-6Dx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
