@@ -79,7 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func applicationWillTerminate(_ application: UIApplication) {
 //        AlarmManager.sendNotif(title: "Application Terminated", body: "The app will not be able to properly ring the alarm.")
         if defaults.object(forKey: "WakeUpTime") != nil  && !defaults.bool(forKey: "RangToday"){
-            AlarmManager.setAlarmDate(withDay: Date())
+            AlarmManager.setAlarms(time: defaults.object(forKey: "WakeUpTime") as! Date)
         }
     }
     
