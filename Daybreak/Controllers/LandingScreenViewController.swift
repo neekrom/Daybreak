@@ -7,35 +7,77 @@
 
 import UIKit
 import GoogleSignIn
+import FirebaseAuth
 import UserNotifications
 
-class LandingScreenViewController: UIViewController {
+class LandingScreenViewController: UIViewController, UNUserNotificationCenterDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let center = UNUserNotificationCenter.current()
-//        center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
-////            if !granted{
-////                let alertController = UIAlertController(title: "Denied access", message: "Looks like you denied access to notification. Please enable this in your settings or you won't receive notifications!", preferredStyle: .alert)
-////                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-////                self.present(alertController, animated: true, completion: nil)
-////            }
-//        }
-        // Do any additional setup after loading the view.
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+                if settings.authorizationStatus == .authorized {
+                    // Already authorized
+                }
+                else {
+                    // Either denied or notDetermined
+                    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+                        (granted, error) in
+                          // add your own
+                        if !granted{
+                            UNUserNotificationCenter.current().delegate = self
+                            let alertController = UIAlertController(title: "Notification Alert", message: "Please enable notifications", preferredStyle: .alert)
+                            let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
+                                guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                                    return
+                                }
+                                if UIApplication.shared.canOpenURL(settingsUrl) {
+                                    UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                                    })
+                                }
+                            }
+                            alertController.addAction(settingsAction)
+                            DispatchQueue.main.async {
+                                self.present(alertController, animated: true, completion: nil)
+                            }
+                        }
+                    }
+                }
+            }
         
-        if GIDSignIn.sharedInstance()?.currentUser != nil{
-            //placeholder move to new VC
+        Auth.auth().addStateDidChangeListener {(auth, user) in
+            if let user = user{
+                print("signed in")
+                let homeViewController = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+                DispatchQueue.main.async {
+                    self.present(homeViewController, animated: true,completion: nil)
+                }
+            }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as! LoginViewController
         destination.modalPresentationStyle = .fullScreen
-        
     }
     
     @IBAction func getStarted(_ sender: UIButton) {
         performSegue(withIdentifier: "getStartedSegue", sender: nil)
     }
     
+    @IBAction func testAlarm(_ sender: Any) {
+        let content = UNMutableNotificationContent()
+        content.title = "Wake Up!"
+        content.body = "Alarm"
+        content.sound = UNNotificationSound.default
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(5), repeats: false)
+        let request = UNNotificationRequest(identifier: "Alarm", content: content, trigger: trigger)
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.add(request, withCompletionHandler: {(error) in
+            if error != nil{
+                print("error")
+            }
+        })
+        print("notification created")
+    }
 }

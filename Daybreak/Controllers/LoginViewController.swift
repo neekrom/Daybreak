@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleSignIn
+import Firebase
 
 @IBDesignable extension UIButton {
 
@@ -40,23 +41,48 @@ import GoogleSignIn
     }
 }
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, GIDSignInDelegate {
     
-    @IBOutlet weak var googleSignIn: GIDSignInButton!
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+      // ...
+        if let error = error {
+            print("error signing in")
+            return
+        }
+
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        print("signed in")
+        let homeViewController = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+        homeViewController.modalPresentationStyle = .fullScreen
+        DispatchQueue.main.async {
+            self.present(homeViewController, animated: true,completion: nil)
+        }
+        
+      // ...
+    }
+
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+        // ...
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! HomeViewController
+        destination.modalPresentationStyle = .fullScreen
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         GIDSignIn.sharedInstance()?.presentingViewController = self
-        NotificationCenter.default.addObserver(self, selector: #selector(didSignIn), name: NSNotification.Name("SuccessfulSignIn"), object: nil)
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance()?.clientID =  FirebaseApp.app()?.options.clientID
     }
     
-    @objc func didSignIn(){
-        performSegue(withIdentifier: "signInSegue", sender: nil)
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
+    @IBAction func logInWithGoogle(_ sender: Any) {
+        GIDSignIn.sharedInstance()?.signIn()
     }
     /*
     // MARK: - Navigation

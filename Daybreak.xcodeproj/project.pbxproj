@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		10605A1B04AB15514E4F647B /* Pods_Daybreak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2537C551C75C021738303803 /* Pods_Daybreak.framework */; };
+		F510814F253BFD2500633BA9 /* radar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F510814E253BFD2500633BA9 /* radar.mp3 */; };
 		F55114BE2530119F008BB2F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F55114BD2530119F008BB2F2 /* GoogleService-Info.plist */; };
 		F56E18B225300D28003A1905 /* LandingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E18B125300D28003A1905 /* LandingScreenViewController.swift */; };
 		F56E18B725300E93003A1905 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56E18B625300E93003A1905 /* LoginViewController.swift */; };
 		F58CD952252ED58A0067AB8D /* Comfortaa.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F58CD951252ED58A0067AB8D /* Comfortaa.ttf */; };
 		F58CD95A252ED9770067AB8D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58CD959252ED9770067AB8D /* Colors.xcassets */; };
+		F5F591DF253B9A4900607966 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F591DE253B9A4900607966 /* HomeViewController.swift */; };
+		F5F591E3253B9E4500607966 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F591E2253B9E4500607966 /* SettingsViewController.swift */; };
+		F5F591E6253BBEAA00607966 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F591E5253BBEAA00607966 /* AlarmViewController.swift */; };
 		F5F7F0B2252D0E5D0022AE4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F0B1252D0E5D0022AE4D /* AppDelegate.swift */; };
 		F5F7F0B4252D0E5D0022AE4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F0B3252D0E5D0022AE4D /* SceneDelegate.swift */; };
 		F5F7F0B9252D0E5D0022AE4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F7F0B7252D0E5D0022AE4D /* Main.storyboard */; };
@@ -23,11 +27,15 @@
 		2537C551C75C021738303803 /* Pods_Daybreak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daybreak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AAE8757DE33593CC66C08C /* Pods-Daybreak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daybreak.release.xcconfig"; path = "Target Support Files/Pods-Daybreak/Pods-Daybreak.release.xcconfig"; sourceTree = "<group>"; };
 		6CDFB1F60BB5D8C07F3ED3C3 /* Pods-Daybreak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daybreak.debug.xcconfig"; path = "Target Support Files/Pods-Daybreak/Pods-Daybreak.debug.xcconfig"; sourceTree = "<group>"; };
+		F510814E253BFD2500633BA9 /* radar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = radar.mp3; sourceTree = "<group>"; };
 		F55114BD2530119F008BB2F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F56E18B125300D28003A1905 /* LandingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenViewController.swift; sourceTree = "<group>"; };
 		F56E18B625300E93003A1905 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F58CD951252ED58A0067AB8D /* Comfortaa.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa.ttf; sourceTree = "<group>"; };
 		F58CD959252ED9770067AB8D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		F5F591DE253B9A4900607966 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F5F591E2253B9E4500607966 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F5F591E5253BBEAA00607966 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		F5F7F0AE252D0E5D0022AE4D /* Daybreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daybreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F7F0B1252D0E5D0022AE4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5F7F0B3252D0E5D0022AE4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +78,9 @@
 			children = (
 				F56E18B125300D28003A1905 /* LandingScreenViewController.swift */,
 				F56E18B625300E93003A1905 /* LoginViewController.swift */,
+				F5F591DE253B9A4900607966 /* HomeViewController.swift */,
+				F5F591E2253B9E4500607966 /* SettingsViewController.swift */,
+				F5F591E5253BBEAA00607966 /* AlarmViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -104,6 +115,7 @@
 				F5F7F0BF252D0E5E0022AE4D /* Info.plist */,
 				F58CD951252ED58A0067AB8D /* Comfortaa.ttf */,
 				F55114BD2530119F008BB2F2 /* GoogleService-Info.plist */,
+				F510814E253BFD2500633BA9 /* radar.mp3 */,
 			);
 			path = Daybreak;
 			sourceTree = "<group>";
@@ -169,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F58CD95A252ED9770067AB8D /* Colors.xcassets in Resources */,
+				F510814F253BFD2500633BA9 /* radar.mp3 in Resources */,
 				F5F7F0BB252D0E5E0022AE4D /* Assets.xcassets in Resources */,
 				F55114BE2530119F008BB2F2 /* GoogleService-Info.plist in Resources */,
 				F58CD952252ED58A0067AB8D /* Comfortaa.ttf in Resources */,
@@ -242,10 +255,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5F591DF253B9A4900607966 /* HomeViewController.swift in Sources */,
 				F56E18B725300E93003A1905 /* LoginViewController.swift in Sources */,
+				F5F591E6253BBEAA00607966 /* AlarmViewController.swift in Sources */,
 				F56E18B225300D28003A1905 /* LandingScreenViewController.swift in Sources */,
 				F5F7F0B2252D0E5D0022AE4D /* AppDelegate.swift in Sources */,
 				F5F7F0B4252D0E5D0022AE4D /* SceneDelegate.swift in Sources */,
+				F5F591E3253B9E4500607966 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +402,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4JW5W7FJ62;
 				INFOPLIST_FILE = Daybreak/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +423,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4JW5W7FJ62;
 				INFOPLIST_FILE = Daybreak/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

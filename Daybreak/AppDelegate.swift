@@ -5,39 +5,56 @@
 //  Created by Tyler Sameshima on 10/6/20.
 //
 
+import AVFoundation
 import UIKit
 import Firebase
 import GoogleSignIn
+import UserNotifications
+import BackgroundTasks
+
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-      // ...
-      if let error = error {
-        // ...
-        return
-      }
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
-      guard let authentication = user.authentication else { return }
-      let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
-      // ...
-        NotificationCenter.default.post(name: Notification.Name("SuccessfulSignIn"), object: nil, userInfo: nil)
-    }
-
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        // Perform any operations when the user disconnects from app here.
-        // ...
-    }
-
-
+    let defaults = UserDefaults.standard
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
+        UNUserNotificationCenter.current().delegate = self
+//        BGTaskScheduler.shared.register(forTaskWithIdentifier: "checkTime", using: nil, launchHandler: {(task) in
+//            self.handleAppRefresh(task: task as! BGAppRefreshTask)
+//        })
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord, options: [.duckOthers, .defaultToSpeaker])
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            NSLog("Audio session error : \(error)")
+        }
         return true
     }
+    
+//    func handleAppRefresh(task: BGAppRefreshTask){
+//        task.expirationHandler = {
+//            task.setTaskCompleted(success: false)
+//        }
+//        guard let wakeupTime = defaults.object(forKey: "WakeUpTime") else {
+//            task.setTaskCompleted(success: true)
+//            return
+//        }
+//        let currentTime = Date()
+//
+//    }
+    
+//    func scheduleTimeCheck(){
+//        let timeCheckTask = BGAppRefreshTaskRequest(identifier: "checkTime")
+//        timeCheckTask.earliestBeginDate = nil
+//        do {
+//            try BGTaskScheduler.shared.submit(timeCheckTask)
+//        } catch {
+//            print("schedule error")
+//        }
+//    }
     
     @available(iOS 9.0, *)
     func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
@@ -58,7 +75,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
+    
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        //moving to the alarm screen only seems to work on first open, closing and then using the app after the initial opening makes this transition not work for some reason
+        let alarmController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AlarmView") as! AlarmViewController
+        alarmController.modalPresentationStyle = .fullScreen
+        if var topController = UIApplication.shared.windows.first?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            topController.present(alarmController, animated: false, completion: nil)
+        }
+//        UIApplication.shared.windows.first?.rootViewController?.present(alarmController, animated: false, completion: nil)
+        completionHandler()
+    }
 
 }
-
