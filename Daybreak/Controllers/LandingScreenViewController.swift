@@ -65,19 +65,4 @@ class LandingScreenViewController: UIViewController, UNUserNotificationCenterDel
         performSegue(withIdentifier: "getStartedSegue", sender: nil)
     }
     
-    @IBAction func testAlarm(_ sender: Any) {
-        let content = UNMutableNotificationContent()
-        content.title = "Wake Up!"
-        content.body = "Alarm"
-        content.sound = UNNotificationSound.default
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(5), repeats: false)
-        let request = UNNotificationRequest(identifier: "Alarm", content: content, trigger: trigger)
-        let notificationCenter = UNUserNotificationCenter.current()
-        notificationCenter.add(request, withCompletionHandler: {(error) in
-            if error != nil{
-                print("error")
-            }
-        })
-        print("notification created")
-    }
 }

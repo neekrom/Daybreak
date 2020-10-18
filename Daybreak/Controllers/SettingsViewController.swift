@@ -21,22 +21,10 @@ class SettingsViewController: UIViewController {
 
 
     @IBAction func wakeUpTimeChanged(_ sender: Any) {
-        let content = UNMutableNotificationContent()
-        content.title = "Wake Up!"
-        content.body = "Alarm"
-        content.sound = UNNotificationSound.init(named: UNNotificationSoundName(rawValue: "radar.mp3"))
         let time = wakeUpTime.date
         defaults.set(time, forKey: "WakeUpTime")
-        let components = Calendar.current.dateComponents([.hour, .minute], from: time)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
-        let request = UNNotificationRequest(identifier: "Alarm", content: content, trigger: trigger)
-        let notificationCenter = UNUserNotificationCenter.current()
-        notificationCenter.add(request, withCompletionHandler: {(error) in
-            if error != nil{
-                print("error")
-            }
-        })
-        
+        defaults.setValue(false, forKey: "RangToday")
+        AlarmManager.setAlarms(time: time)
     }
     /*
     // MARK: - Navigation

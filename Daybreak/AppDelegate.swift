@@ -76,16 +76,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     
+    func applicationWillTerminate(_ application: UIApplication) {
+//        AlarmManager.sendNotif(title: "Application Terminated", body: "The app will not be able to properly ring the alarm.")
+        if defaults.object(forKey: "WakeUpTime") != nil  && !defaults.bool(forKey: "RangToday"){
+            AlarmManager.setAlarmDate(withDay: Date())
+        }
+    }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         //moving to the alarm screen only seems to work on first open, closing and then using the app after the initial opening makes this transition not work for some reason
-        let alarmController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AlarmView") as! AlarmViewController
-        alarmController.modalPresentationStyle = .fullScreen
-        if var topController = UIApplication.shared.windows.first?.rootViewController {
-            while let presentedViewController = topController.presentedViewController {
-                topController = presentedViewController
+        if String(response.notification.request.identifier.prefix(5)) == "Alarm" {
+            let alarmController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AlarmView") as! AlarmViewController
+            alarmController.modalPresentationStyle = .fullScreen
+            if var topController = UIApplication.shared.windows.first?.rootViewController {
+                while let presentedViewController = topController.presentedViewController {
+                    topController = presentedViewController
+                }
+                topController.present(alarmController, animated: false, completion: nil)
             }
-            topController.present(alarmController, animated: false, completion: nil)
         }
 //        UIApplication.shared.windows.first?.rootViewController?.present(alarmController, animated: false, completion: nil)
         completionHandler()

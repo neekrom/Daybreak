@@ -88,14 +88,6 @@
                                 <color key="textColor" red="0.36862745099999999" green="0.3921568627" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ht-Cg-T48">
-                                <rect key="frame" x="120" y="93" width="120" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="5 sec delay alarm"/>
-                                <connections>
-                                    <action selector="testAlarm:" destination="BYZ-38-t0r" eventType="touchDown" id="heL-AS-k5i"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Background 1"/>
@@ -576,7 +568,7 @@
             <objects>
                 <viewController title="Settings View Controller" id="aUm-01-nAN" customClass="SettingsViewController" customModule="Daybreak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4xc-Td-rnS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="pink rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="Btx-Fw-s2c">
@@ -713,7 +705,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9eT-OK-K7Z"/>
+        <segue reference="CUv-8U-ZkA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Blue Hill" width="375" height="442"/>

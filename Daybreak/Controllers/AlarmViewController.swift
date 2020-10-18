@@ -10,9 +10,12 @@ import AVFoundation
 
 class AlarmViewController: UIViewController {
 
+    let defaults = UserDefaults.standard
     var player = AVAudioPlayer()
     override func viewDidLoad() {
         super.viewDidLoad()
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UserDefaults.standard.setValue(true, forKey: "RangToday")
         let sound = Bundle.main.path(forResource: "radar", ofType: "mp3")
         do{
             player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
@@ -27,6 +30,13 @@ class AlarmViewController: UIViewController {
 
     @IBAction func homePressed(_ sender: Any) {
         player.stop()
+        let wakeUpTime = defaults.object(forKey: "WakeUpTime") as! Date
+        let wakeUpHour = Calendar.current.component(.hour, from: wakeUpTime)
+        let wakeUpMinute = Calendar.current.component(.minute, from: wakeUpTime)
+        var time = Calendar.current.date(bySetting: .hour, value: wakeUpHour, of: Date())!
+        time = Calendar.current.date(bySetting: .minute, value: wakeUpMinute, of: time)!
+        time = Calendar.current.date(byAdding: .day, value: 1, to: time)!
+        AlarmManager.setAlarmDate(withDay: time)
         performSegue(withIdentifier: "AlarmToHome", sender: self)
     }
     /*
