@@ -15,7 +15,8 @@ class AlarmViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-        let sound = Bundle.main.path(forResource: "radar", ofType: "mp3")
+        let radar: String = AlarmManager.volumes[Double(defaults.float(forKey: "Volume"))] ?? "radar0"
+        let sound = Bundle.main.path(forResource: radar, ofType: "mp3")
         do{
             player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
         } catch {
@@ -29,7 +30,7 @@ class AlarmViewController: UIViewController {
 
     @IBAction func homePressed(_ sender: Any) {
         player.stop()
-        defaults.setValue(true, forKey: "RangToday")
+        defaults.setValue(Date(), forKey: "RangDate")
         let wakeUpTime = defaults.object(forKey: "WakeUpTime") as! Date
         let wakeUpHour = Calendar.current.component(.hour, from: wakeUpTime)
         let wakeUpMinute = Calendar.current.component(.minute, from: wakeUpTime)
