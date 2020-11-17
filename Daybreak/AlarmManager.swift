@@ -11,7 +11,7 @@ import UserNotifications
 class AlarmManager {
     static let volumes = [0.0: "radar-6", 20.0: "radar-3", 40.0: "radar0", 60.0: "radar3", 80.0: "radar6", 100.0: "radar9"]
     class func setAlarms(time: Date){
-        if true {//UserDefaults.standard.bool(forKey: "Enabled") {
+        if UserDefaults.standard.bool(forKey: "Enabled") {
             let content = self.notifContent()
             for index in 0...60 {
                 let newTime = time.addingTimeInterval(23.0 * Double(index))
