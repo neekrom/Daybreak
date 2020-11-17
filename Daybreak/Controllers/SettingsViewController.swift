@@ -58,6 +58,14 @@ class SettingsViewController: UIViewController {
             self.player.stop()
         })
     }
+    @IBAction func testAlarm(_ sender: Any) {
+        let date = Date() + 10
+        let time = date
+        defaults.set(time, forKey: "WakeUpTime")
+        defaults.setValue(Date(timeIntervalSinceReferenceDate: 0.0), forKey: "RangDate")
+        AlarmManager.setAlarms(time: date)
+//        print(1)
+    }
     /*
     // MARK: - Navigation
 

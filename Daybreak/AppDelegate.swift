@@ -83,10 +83,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             AlarmManager.setAlarms(time: defaults.object(forKey: "WakeUpTime") as! Date)
         }
     }
-    
+    // did return from background
+    // check defaults value if it is set to true, then go to view controller
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         //moving to the alarm screen only seems to work on first open, closing and then using the app after the initial opening makes this transition not work for some reason
         if String(response.notification.request.identifier.prefix(5)) == "Alarm" {
+            defaults.set(true, forKey: "CameFromAlarm")
             let alarmController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AlarmView") as! AlarmViewController
             alarmController.modalPresentationStyle = .fullScreen
             if var topController = UIApplication.shared.windows.first?.rootViewController {

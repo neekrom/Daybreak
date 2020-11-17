@@ -8,10 +8,18 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+//    var timer = Timer()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true, block: {(Timer) in
+//            print("running")
+//            if UserDefaults.standard.bool(forKey: "CameFromAlarm") {
+//                let alarmController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AlarmView") as! AlarmViewController
+//                alarmController.modalPresentationStyle = .fullScreen
+//                UserDefaults.standard.set(false, forKey: "CameFromAlarm")
+//                self.present(alarmController, animated: false, completion: nil)
+//            }
+//        })
         // Do any additional setup after loading the view.
     }
     
