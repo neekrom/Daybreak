@@ -82,6 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         if defaults.object(forKey: "WakeUpTime") != nil  && !AlarmManager.rangToday(){
             AlarmManager.setAlarms(time: defaults.object(forKey: "WakeUpTime") as! Date)
         }
+        NSLog("terminated")
     }
     // did return from background
     // check defaults value if it is set to true, then go to view controller

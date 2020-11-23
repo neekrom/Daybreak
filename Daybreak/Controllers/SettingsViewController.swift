@@ -40,9 +40,11 @@ class SettingsViewController: UIViewController {
         let roundedValue = round(sender.value / step) * step
         sender.value = roundedValue
         defaults.setValue(roundedValue, forKey: "Volume")
+        AlarmManager.setAlarms(time: wakeUpTime.date)
     }
     @IBAction func alarmSwitchChanged(_ sender: UISwitch) {
         defaults.setValue(sender.isOn, forKey: "Enabled")
+        AlarmManager.setAlarms(time: wakeUpTime.date)
     }
     @IBAction func testVolume(_ sender: Any) {
         let radar: String = AlarmManager.volumes[Double(defaults.float(forKey: "Volume"))] ?? "radar0"
@@ -65,6 +67,9 @@ class SettingsViewController: UIViewController {
         defaults.setValue(Date(timeIntervalSinceReferenceDate: 0.0), forKey: "RangDate")
         AlarmManager.setAlarms(time: date)
 //        print(1)
+    }
+    @IBAction func multipleAlarmsPressed(_ sender: Any) {
+        performSegue(withIdentifier: "alarmTable", sender: self)
     }
     /*
     // MARK: - Navigation

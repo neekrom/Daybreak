@@ -27,6 +27,12 @@
 		F5F7F0B4252D0E5D0022AE4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F0B3252D0E5D0022AE4D /* SceneDelegate.swift */; };
 		F5F7F0B9252D0E5D0022AE4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F7F0B7252D0E5D0022AE4D /* Main.storyboard */; };
 		F5F7F0BB252D0E5E0022AE4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F7F0BA252D0E5E0022AE4D /* Assets.xcassets */; };
+		F5FD8058256B505B00B60EA7 /* TableAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FD8057256B505B00B60EA7 /* TableAlarmViewController.swift */; };
+		F5FD805B256B52FB00B60EA7 /* CustomAlarmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5FD805A256B52FB00B60EA7 /* CustomAlarmTableViewCell.xib */; };
+		F5FD805E256B53BF00B60EA7 /* CustomAlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FD805D256B53BF00B60EA7 /* CustomAlarmTableViewCell.swift */; };
+		F5FD8062256B56D900B60EA7 /* AlarmSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FD8061256B56D900B60EA7 /* AlarmSettingsViewController.swift */; };
+		F5FD8065256B58AB00B60EA7 /* PerAlarmSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FD8064256B58AB00B60EA7 /* PerAlarmSettingsViewController.swift */; };
+		F5FD8068256B5D8E00B60EA7 /* WeekdaySelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FD8067256B5D8E00B60EA7 /* WeekdaySelectorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +60,12 @@
 		F5F7F0B8252D0E5D0022AE4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F5F7F0BA252D0E5E0022AE4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5F7F0BF252D0E5E0022AE4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5FD8057256B505B00B60EA7 /* TableAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableAlarmViewController.swift; sourceTree = "<group>"; };
+		F5FD805A256B52FB00B60EA7 /* CustomAlarmTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAlarmTableViewCell.xib; sourceTree = "<group>"; };
+		F5FD805D256B53BF00B60EA7 /* CustomAlarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlarmTableViewCell.swift; sourceTree = "<group>"; };
+		F5FD8061256B56D900B60EA7 /* AlarmSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSettingsViewController.swift; sourceTree = "<group>"; };
+		F5FD8064256B58AB00B60EA7 /* PerAlarmSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerAlarmSettingsViewController.swift; sourceTree = "<group>"; };
+		F5FD8067256B5D8E00B60EA7 /* WeekdaySelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaySelectorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +105,10 @@
 				F5F591DE253B9A4900607966 /* HomeViewController.swift */,
 				F5F591E2253B9E4500607966 /* SettingsViewController.swift */,
 				F5F591E5253BBEAA00607966 /* AlarmViewController.swift */,
+				F5FD8057256B505B00B60EA7 /* TableAlarmViewController.swift */,
+				F5FD8061256B56D900B60EA7 /* AlarmSettingsViewController.swift */,
+				F5FD8064256B58AB00B60EA7 /* PerAlarmSettingsViewController.swift */,
+				F5FD8067256B5D8E00B60EA7 /* WeekdaySelectorViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -134,6 +150,8 @@
 				F5C845802540D4D00026F3BC /* radar-3.mp3 */,
 				F5C845832540D4EB0026F3BC /* radar-6.mp3 */,
 				F5D790E2253C20F2006B07FE /* AlarmManager.swift */,
+				F5FD805A256B52FB00B60EA7 /* CustomAlarmTableViewCell.xib */,
+				F5FD805D256B53BF00B60EA7 /* CustomAlarmTableViewCell.swift */,
 			);
 			path = Daybreak;
 			sourceTree = "<group>";
@@ -202,6 +220,7 @@
 				F5D790E6253C2208006B07FE /* radar0.mp3 in Resources */,
 				F58CD95A252ED9770067AB8D /* Colors.xcassets in Resources */,
 				F5C845812540D4D00026F3BC /* radar-3.mp3 in Resources */,
+				F5FD805B256B52FB00B60EA7 /* CustomAlarmTableViewCell.xib in Resources */,
 				F5F7F0BB252D0E5E0022AE4D /* Assets.xcassets in Resources */,
 				F5C845782540D4490026F3BC /* radar3.mp3 in Resources */,
 				F5C845842540D4EB0026F3BC /* radar-6.mp3 in Resources */,
@@ -280,12 +299,17 @@
 			files = (
 				F5F591DF253B9A4900607966 /* HomeViewController.swift in Sources */,
 				F56E18B725300E93003A1905 /* LoginViewController.swift in Sources */,
+				F5FD8068256B5D8E00B60EA7 /* WeekdaySelectorViewController.swift in Sources */,
+				F5FD805E256B53BF00B60EA7 /* CustomAlarmTableViewCell.swift in Sources */,
 				F5F591E6253BBEAA00607966 /* AlarmViewController.swift in Sources */,
 				F56E18B225300D28003A1905 /* LandingScreenViewController.swift in Sources */,
 				F5F7F0B2252D0E5D0022AE4D /* AppDelegate.swift in Sources */,
 				F5D790E3253C20F2006B07FE /* AlarmManager.swift in Sources */,
+				F5FD8058256B505B00B60EA7 /* TableAlarmViewController.swift in Sources */,
+				F5FD8062256B56D900B60EA7 /* AlarmSettingsViewController.swift in Sources */,
 				F5F7F0B4252D0E5D0022AE4D /* SceneDelegate.swift in Sources */,
 				F5F591E3253B9E4500607966 /* SettingsViewController.swift in Sources */,
+				F5FD8065256B58AB00B60EA7 /* PerAlarmSettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
