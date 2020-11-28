@@ -14,7 +14,7 @@ class LandingScreenViewController: UIViewController, UNUserNotificationCenterDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+//        self.navigationController?.setNavigationBarHidden(true, animated: false)
         UNUserNotificationCenter.current().getNotificationSettings { (settings) in
                 if settings.authorizationStatus == .authorized {
                     // Already authorized

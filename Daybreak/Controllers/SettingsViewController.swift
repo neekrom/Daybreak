@@ -69,7 +69,7 @@ class SettingsViewController: UIViewController {
 //        print(1)
     }
     @IBAction func multipleAlarmsPressed(_ sender: Any) {
-        performSegue(withIdentifier: "alarmTable", sender: self)
+        performSegue(withIdentifier: "multipleAlarmSegue", sender: self)
     }
     /*
     // MARK: - Navigation
