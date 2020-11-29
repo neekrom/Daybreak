@@ -64,6 +64,7 @@ class PerAlarmSettingsViewController: UIViewController, UITableViewDelegate, UIT
         UserDefaults.standard.setValue(alarms, forKey: "Alarms")
         let tableAlarmVC = presentingViewController as! TableAlarmViewController
         tableAlarmVC.tableView.reloadData()
+        AlarmManager.setAllAlarms()
         dismiss(animated: true, completion: nil)
     }
     

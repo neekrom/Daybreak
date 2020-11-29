@@ -16,7 +16,7 @@ class TableAlarmViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        df.dateFormat = "hh:mm"
+        df.dateFormat = "hh:mm a"
         self.tableView.register(UINib(nibName: "CustomAlarmTableViewCell", bundle: nil), forCellReuseIdentifier: "alarmCell")
         if defaults.array(forKey: "Alarms") == nil {
             defaults.set(Array<Any>(), forKey: "Alarms")

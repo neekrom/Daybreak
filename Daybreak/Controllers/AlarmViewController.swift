@@ -14,7 +14,6 @@ class AlarmViewController: UIViewController {
     var player = AVAudioPlayer()
     override func viewDidLoad() {
         super.viewDidLoad()
-        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         let radar: String = AlarmManager.volumes[Double(defaults.float(forKey: "Volume"))] ?? "radar0"
         let sound = Bundle.main.path(forResource: radar, ofType: "mp3")
         do{
@@ -30,14 +29,22 @@ class AlarmViewController: UIViewController {
 
     @IBAction func homePressed(_ sender: Any) {
         player.stop()
-        defaults.setValue(Date(), forKey: "RangDate")
-        let wakeUpTime = defaults.object(forKey: "WakeUpTime") as! Date
-        let wakeUpHour = Calendar.current.component(.hour, from: wakeUpTime)
-        let wakeUpMinute = Calendar.current.component(.minute, from: wakeUpTime)
-        var time = Calendar.current.date(bySetting: .hour, value: wakeUpHour, of: Date())!
-        time = Calendar.current.date(bySetting: .minute, value: wakeUpMinute, of: time)!
-        time = Calendar.current.date(byAdding: .day, value: 1, to: time)!
-        AlarmManager.setAlarmDate(withDay: time)
+        let alarms = defaults.array(forKey: "Alarms")!
+        var alarm = alarms[AlarmManager.currentAlarm] as! Dictionary<String, Any>
+        if alarm["weekdays"] as! [Int] == [Int]() {
+            alarm["enabled"] = false
+        }
+        defaults.setValue(alarms, forKey: "Alarms")
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        AlarmManager.setAllAlarms()
+//        defaults.setValue(Date(), forKey: "RangDate")
+//        let wakeUpTime = defaults.object(forKey: "WakeUpTime") as! Date
+//        let wakeUpHour = Calendar.current.component(.hour, from: wakeUpTime)
+//        let wakeUpMinute = Calendar.current.component(.minute, from: wakeUpTime)
+//        var time = Calendar.current.date(bySetting: .hour, value: wakeUpHour, of: Date())!
+//        time = Calendar.current.date(bySetting: .minute, value: wakeUpMinute, of: time)!
+//        time = Calendar.current.date(byAdding: .day, value: 1, to: time)!
+//        AlarmManager.setAlarmDate(withDay: time)
         performSegue(withIdentifier: "AlarmToHome", sender: self)
     }
     /*

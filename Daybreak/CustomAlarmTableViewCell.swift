@@ -30,6 +30,8 @@ class CustomAlarmTableViewCell: UITableViewCell {
         alarm["enabled"] = enabledSwitch.isOn
         defaults.setValue(alarms, forKey: "Alarms")
         //maybe call alarmmanager
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        AlarmManager.setAllAlarms()
     }
     @IBAction func deleteAlarm(_ sender: Any) {
         var alarms = defaults.array(forKey: "Alarms")
@@ -39,5 +41,7 @@ class CustomAlarmTableViewCell: UITableViewCell {
         defaults.setValue(numAlarms - 1, forKey: "numAlarms")
         presentingVC?.tableView.reloadData()
         //call alarmmanager
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        AlarmManager.setAllAlarms()
     }
 }
