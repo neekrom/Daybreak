@@ -731,7 +731,7 @@
         <scene sceneID="LBn-Dv-C3g">
             <objects>
                 <viewController title="Daily Digest VIew Controller" id="ZXx-ua-XPl" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="6Rf-Xx-sbG">
+                    <view key="view" contentMode="scaleToFill" id="6Rf-Xx-sbG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -942,14 +942,6 @@
                                 <state key="normal" title="Test Volume"/>
                                 <connections>
                                     <action selector="testVolume:" destination="aUm-01-nAN" eventType="touchDown" id="ju0-DK-xDE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rp9-GY-8eW">
-                                <rect key="frame" x="32" y="243" width="69" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="test alarm"/>
-                                <connections>
-                                    <action selector="testAlarm:" destination="aUm-01-nAN" eventType="touchUpInside" id="Ivq-oS-7pv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UO3-Ft-aJp">
@@ -1231,7 +1223,6 @@
         <!--Navigation Controller-->
         <scene sceneID="b7N-fg-X8C">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Csn-JQ-rOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eom-P8-Pp8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hsq-em-NT2">
@@ -1240,6 +1231,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Csn-JQ-rOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="75.669642857142847"/>
         </scene>

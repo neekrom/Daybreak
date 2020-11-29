@@ -79,10 +79,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func applicationWillTerminate(_ application: UIApplication) {
 //        AlarmManager.sendNotif(title: "Application Terminated", body: "The app will not be able to properly ring the alarm.")
-        if defaults.object(forKey: "WakeUpTime") != nil  && !AlarmManager.rangToday(){
-            AlarmManager.setAlarms(time: defaults.object(forKey: "WakeUpTime") as! Date)
-        }
-        NSLog("terminated")
+//        if defaults.object(forKey: "WakeUpTime") != nil  && !AlarmManager.rangToday(){
+//            AlarmManager.setAlarms(time: defaults.object(forKey: "WakeUpTime") as! Date)
+//        }
+//        NSLog("terminated")
     }
     // did return from background
     // check defaults value if it is set to true, then go to view controller

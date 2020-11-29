@@ -29,23 +29,23 @@ class SettingsViewController: UIViewController {
         player.stop()
     }
 
-    @IBAction func wakeUpTimeChanged(_ sender: Any) {
-        let time = wakeUpTime.date
-        defaults.set(time, forKey: "WakeUpTime")
-        defaults.setValue(Date(timeIntervalSinceReferenceDate: 0.0), forKey: "RangDate")
-        AlarmManager.setAlarms(time: time)
-    }
+//    @IBAction func wakeUpTimeChanged(_ sender: Any) {
+//        let time = wakeUpTime.date
+//        defaults.set(time, forKey: "WakeUpTime")
+//        defaults.setValue(Date(timeIntervalSinceReferenceDate: 0.0), forKey: "RangDate")
+//        AlarmManager.setAlarms(time: time)
+//    }
     
     @IBAction func volumeChanged(_ sender: UISlider) {
         let roundedValue = round(sender.value / step) * step
         sender.value = roundedValue
         defaults.setValue(roundedValue, forKey: "Volume")
-        AlarmManager.setAlarms(time: wakeUpTime.date)
+        AlarmManager.setAllAlarms()
     }
-    @IBAction func alarmSwitchChanged(_ sender: UISwitch) {
-        defaults.setValue(sender.isOn, forKey: "Enabled")
-        AlarmManager.setAlarms(time: wakeUpTime.date)
-    }
+//    @IBAction func alarmSwitchChanged(_ sender: UISwitch) {
+//        defaults.setValue(sender.isOn, forKey: "Enabled")
+//        AlarmManager.setAlarms(time: wakeUpTime.date)
+//    }
     @IBAction func testVolume(_ sender: Any) {
         let radar: String = AlarmManager.volumes[Double(defaults.float(forKey: "Volume"))] ?? "radar0"
         let sound = Bundle.main.path(forResource: radar, ofType: "mp3")
@@ -59,14 +59,6 @@ class SettingsViewController: UIViewController {
         audioPlayerTimer = Timer.scheduledTimer(withTimeInterval: 3.5, repeats: false, block: {_ in
             self.player.stop()
         })
-    }
-    @IBAction func testAlarm(_ sender: Any) {
-        let date = Date() + 10
-        let time = date
-        defaults.set(time, forKey: "WakeUpTime")
-        defaults.setValue(Date(timeIntervalSinceReferenceDate: 0.0), forKey: "RangDate")
-        AlarmManager.setAlarms(time: date)
-//        print(1)
     }
     @IBAction func multipleAlarmsPressed(_ sender: Any) {
         performSegue(withIdentifier: "multipleAlarmSegue", sender: self)

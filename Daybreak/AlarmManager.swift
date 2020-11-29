@@ -44,19 +44,19 @@ class AlarmManager {
             }
         }
     }
-    class func setAlarms(time: Date){
-        if UserDefaults.standard.bool(forKey: "Enabled") {
-            let content = self.notifContent()
-            for index in 0...60 {
-                let newTime = time.addingTimeInterval(23.0 * Double(index))
-                let components = Calendar.current.dateComponents([.hour, .minute, .second], from: newTime)
-                let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
-                let request = UNNotificationRequest(identifier: "Alarm\(index)", content: content, trigger: trigger)
-                UNUserNotificationCenter.current().add(request)
-                // add user defaults set sent notif
-            }
-        }
-    }
+//    class func setAlarms(time: Date){
+//        if UserDefaults.standard.bool(forKey: "Enabled") {
+//            let content = self.notifContent()
+//            for index in 0...60 {
+//                let newTime = time.addingTimeInterval(23.0 * Double(index))
+//                let components = Calendar.current.dateComponents([.hour, .minute, .second], from: newTime)
+//                let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
+//                let request = UNNotificationRequest(identifier: "Alarm\(index)", content: content, trigger: trigger)
+//                UNUserNotificationCenter.current().add(request)
+//                // add user defaults set sent notif
+//            }
+//        }
+//    }
     
     private class func notifContent() -> UNMutableNotificationContent {
         let content = UNMutableNotificationContent()
@@ -67,34 +67,34 @@ class AlarmManager {
         return content
     }
     
-    class func rangToday() -> Bool {
-        let rangDate = UserDefaults.standard.object(forKey: "RangDate") as! Date
-        let dayComparison = Calendar.current.compare(Date(), to: rangDate, toGranularity: .day)
-        let monthComparison = Calendar.current.compare(Date(), to: rangDate, toGranularity: .month)
-        let yearComparison = Calendar.current.compare(Date(), to: rangDate, toGranularity: .year)
-        return (dayComparison == ComparisonResult.orderedSame) && (monthComparison == ComparisonResult.orderedSame) && (yearComparison == ComparisonResult.orderedSame)
-    }
+//    class func rangToday() -> Bool {
+//        let rangDate = UserDefaults.standard.object(forKey: "RangDate") as! Date
+//        let dayComparison = Calendar.current.compare(Date(), to: rangDate, toGranularity: .day)
+//        let monthComparison = Calendar.current.compare(Date(), to: rangDate, toGranularity: .month)
+//        let yearComparison = Calendar.current.compare(Date(), to: rangDate, toGranularity: .year)
+//        return (dayComparison == ComparisonResult.orderedSame) && (monthComparison == ComparisonResult.orderedSame) && (yearComparison == ComparisonResult.orderedSame)
+//    }
+//
+//    class func setAlarmDate(withDay time: Date) {
+//        let content = self.notifContent()
+//        for index in 0...60 {
+//            let newTime = time.addingTimeInterval(23.0 * Double(index))
+//            let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: newTime)
+//            let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+//            let request = UNNotificationRequest(identifier: "Alarm\(index)", content: content, trigger: trigger)
+//            UNUserNotificationCenter.current().add(request)
+//
+//        }
+//    }
     
-    class func setAlarmDate(withDay time: Date) {
-        let content = self.notifContent()
-        for index in 0...60 {
-            let newTime = time.addingTimeInterval(23.0 * Double(index))
-            let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: newTime)
-            let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
-            let request = UNNotificationRequest(identifier: "Alarm\(index)", content: content, trigger: trigger)
-            UNUserNotificationCenter.current().add(request)
-            
-        }
-    }
-    
-    class func sendNotif(title: String, body: String){
-        let content = UNMutableNotificationContent()
-        content.title = title
-        content.body = body
-        content.sound = UNNotificationSound.default
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(1), repeats: false)
-        let request = UNNotificationRequest(identifier: "AppClosed", content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request)
-    }
+//    class func sendNotif(title: String, body: String){
+//        let content = UNMutableNotificationContent()
+//        content.title = title
+//        content.body = body
+//        content.sound = UNNotificationSound.default
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(1), repeats: false)
+//        let request = UNNotificationRequest(identifier: "AppClosed", content: content, trigger: trigger)
+//        UNUserNotificationCenter.current().add(request)
+//    }
     
 }
