@@ -14,7 +14,29 @@ import BackgroundTasks
 
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+      // ...
+        if let error = error {
+            print("error signing in")
+            return
+        }
+
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        Auth.auth().signIn(with: credential) { (authResult, error) in
+          if let error = error {
+            let authError = error as NSError
+            print("error")
+              return
+            }
+            // ...
+            return
+          }
+          // User is signed in
+          // ...
+        UserDefaults.standard.set(true, forKey: "loggedin")
+        }
     
     var firstTimeLaunch: Bool!
     let defaults = UserDefaults.standard
@@ -22,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Override point for customization after application launch.
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance()?.delegate = self
         UNUserNotificationCenter.current().delegate = self
 //        BGTaskScheduler.shared.register(forTaskWithIdentifier: "checkTime", using: nil, launchHandler: {(task) in
 //            self.handleAppRefresh(task: task as! BGAppRefreshTask)

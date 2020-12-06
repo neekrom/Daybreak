@@ -41,32 +41,14 @@ import Firebase
     }
 }
 
-class LoginViewController: UIViewController, GIDSignInDelegate {
-    
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-      // ...
-        if let error = error {
-            print("error signing in")
-            return
-        }
-
-        guard let authentication = user.authentication else { return }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
-        print("signed in")
-        let homeViewController = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
-        homeViewController.modalPresentationStyle = .fullScreen
-        DispatchQueue.main.async {
-            self.present(homeViewController, animated: true,completion: nil)
-        }
-        
-      // ...
-    }
-
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        // Perform any operations when the user disconnects from app here.
-        // ...
-    }
-    
+class LoginViewController: UIViewController {
+//    print("signed in")
+//    let homeViewController = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+//    homeViewController.modalPresentationStyle = .fullScreen
+//    DispatchQueue.main.async {
+//        self.present(homeViewController, animated: true,completion: nil)
+//    }
+    var signedInTimer: Timer?
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as! HomeViewController
         destination.modalPresentationStyle = .fullScreen
@@ -77,12 +59,20 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
 
         // Do any additional setup after loading the view.
         GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance()?.clientID =  FirebaseApp.app()?.options.clientID
+        signedInTimer = Timer.scheduledTimer(withTimeInterval: 4, repeats: true, block: { timer in
+            if UserDefaults.standard.bool(forKey: "loggedin") {
+                self.performSegue(withIdentifier: "signInSegue", sender: nil)
+            }
+        })
+//        GIDSignIn.sharedInstance()?.clientID =  FirebaseApp.app()?.options.clientID
     }
     
     @IBAction func logInWithGoogle(_ sender: Any) {
         GIDSignIn.sharedInstance()?.signIn()
+    }
+    
+    deinit {
+        signedInTimer?.invalidate()
     }
     /*
     // MARK: - Navigation

@@ -49,8 +49,9 @@ class LandingScreenViewController: UIViewController, UNUserNotificationCenterDel
             if let user = user{
                 print("signed in")
                 let homeViewController = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+                homeViewController.modalPresentationStyle = .fullScreen
                 DispatchQueue.main.async {
-                    self.present(homeViewController, animated: true,completion: nil)
+                    self.present(homeViewController, animated: false,completion: nil)
                 }
             }
         }
